@@ -1,9 +1,10 @@
 import { Button, Group } from "@mantine/core";
+import Header from "../components/Header";
 
 export default function IndexPage() {
-  return (
-    <Group mt={50} justify="center">
-      <Button size="xl">Welcome to Mantine!</Button>
-    </Group>
-  );
+	return (
+		<main>
+			<Header />
+		</main>
+	);
 }
