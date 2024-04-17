@@ -4,7 +4,7 @@ import { IconBrandGithub, IconMapPin, IconSearch } from "@tabler/icons-react";
 
 export default function Header() {
     return (
-        <header className="flex justify-between items-center h-[64px] border-solid border-b-2 border-[#2E2E2E] px-5">
+        <header className="flex justify-between items-center h-[64px] border-solid border-b-[1.5px] border-[#3d3d3d] px-5">
             <Group>
 
             </Group>
