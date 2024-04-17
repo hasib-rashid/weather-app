@@ -1,4 +1,3 @@
-import { Divider } from "@mantine/core";
 import Header from "./components/Header";
 import "./globals.css"
 

@@ -1,4 +1,4 @@
-import { ActionIcon, Button, Card, Group, Paper, TextInput } from "@mantine/core";
+import { ActionIcon, Button, Group, TextInput } from "@mantine/core";
 import React from "react";
 import { IconBrandGithub, IconMapPin, IconSearch } from "@tabler/icons-react";
 
