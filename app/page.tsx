@@ -9,6 +9,7 @@ import AdditionalInfoCard from "./components/AdditionalInfoCard";
 import SunInfoCard from "./components/SunInfoCard";
 import WindCard from "./components/WindCard";
 import UVInfo from "./components/UVInfo";
+import PrecipitationCard from "./components/PrecipitationCard";
 
 export default function HomePage() {
 	return (
@@ -23,8 +24,7 @@ export default function HomePage() {
 					<WeatherCard />
 					<div>
 						<AirPollution />
-						<SimpleGrid cols={{ base: 1, sm: 2, lg: 2 }}
-							spacing={{ base: 10, sm: 'xl' }}
+						<SimpleGrid cols={{ base: 2, sm: 2, lg: 2 }}
 							verticalSpacing={{ base: 'md', sm: 'xl' }}
 							className="w-full h-[40vh] mt-[3vh]"
 						>
@@ -34,14 +34,13 @@ export default function HomePage() {
 					</div>
 
 					<SimpleGrid cols={{ base: 2, sm: 2, lg: 2 }}
-						spacing={{ sm: 'sm' }}
 						verticalSpacing={{ sm: 'sm' }}
-						className="sm:w-[50vw] mt-52 justify-center items-center lg:m-0 lg:w-[31vw] h-[75vh]"
+						className="sm:w-[50vw] justify-center items-center lg:m-0 lg:w-[31vw] h-[75vh]"
 					>
 						<SunInfoCard />
 						<WindCard />
 						<UVInfo />
-						<AdditionalInfoCard />
+						<PrecipitationCard />
 
 					</SimpleGrid>
 
