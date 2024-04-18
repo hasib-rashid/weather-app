@@ -23,7 +23,7 @@ export default function UVInfo() {
                 <h2 className="text-xl font-bold">5</h2>
                 <h2 className="text-xl font-bold mb-3">Moderate</h2>
                 <Slider value={70} className="pointer-events-none" marks={marks} color="violet" />
-                <h3 className="mt-7">Take Precautions</h3>
+                <h3 className="md:mt-96 lg:mt-7">Take Precautions</h3>
             </Card>
         </div>
     )

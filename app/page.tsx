@@ -16,31 +16,30 @@ export default function HomePage() {
 		<div className="font-poppins">
 			<Header />
 			<div className="m-[1vw]">
-				<SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }}
-					spacing={{ base: 100, sm: 'xl' }}
+				<SimpleGrid
+					className="sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3"
 					verticalSpacing={{ base: 'md', sm: 'xl' }}
 				>
 					<WeatherCard />
 					<div>
 						<AirPollution />
-						<SimpleGrid cols={{ base: 2, sm: 2, lg: 2 }}
+						<SimpleGrid
 							verticalSpacing={{ base: 'md', sm: 'xl' }}
-							className="w-full h-[40vh] mt-[3vh]"
+							className="w-full h-[40vh] mt-[3vh] grid-cols-2"
 						>
 							<HighestTemp />
 							<LowestTemp />
 						</SimpleGrid>
 					</div>
 
-					<SimpleGrid cols={{ base: 2, sm: 2, lg: 2 }}
+					<SimpleGrid
 						verticalSpacing={{ sm: 'sm' }}
-						className="sm:w-[50vw] justify-center items-center lg:m-0 lg:w-[31vw] h-[75vh]"
+						className="justify-center items-center lg:m-0 sm:grid-cols-4 sm:w-[96vw] md:grid-cols-4 md:w-[96vw] lg:w-full lg:grid-cols-2"
 					>
 						<SunInfoCard />
 						<WindCard />
 						<UVInfo />
 						<PrecipitationCard />
-
 					</SimpleGrid>
 
 				</SimpleGrid>
