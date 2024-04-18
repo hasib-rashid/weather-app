@@ -6,6 +6,7 @@ import AirPollution from "./components/AirPollution";
 import HighestTemp from "./components/HighestTemp";
 import LowestTemp from "./components/LowestTemp";
 import AdditionalInfoCard from "./components/AdditionalInfoCard";
+import SunInfoCard from "./components/SunInfoCard";
 
 export default function HomePage() {
 	return (
@@ -35,7 +36,7 @@ export default function HomePage() {
 						verticalSpacing={{ sm: 'sm' }}
 						className="lg:w-[31vw] h-[75vh]"
 					>
-						<AdditionalInfoCard />
+						<SunInfoCard />
 						<AdditionalInfoCard />
 						<AdditionalInfoCard />
 						<AdditionalInfoCard />
