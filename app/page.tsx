@@ -19,7 +19,6 @@ export default function HomePage() {
 				<SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }}
 					spacing={{ base: 100, sm: 'xl' }}
 					verticalSpacing={{ base: 'md', sm: 'xl' }}
-					w={"98vw"}
 				>
 					<WeatherCard />
 					<div>
