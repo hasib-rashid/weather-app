@@ -7,3 +7,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.radiant {
+    background: linear-gradient(90deg, rgb(58, 110, 180) 0%, rgb(126, 212, 87) 20%, rgb(248, 212, 73) 40%, rgb(235, 77, 96) 60%, rgb(180, 96, 231) 80%, rgb(178, 34, 34) 100%);
+}
