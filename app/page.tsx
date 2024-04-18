@@ -7,6 +7,7 @@ import HighestTemp from "./components/HighestTemp";
 import LowestTemp from "./components/LowestTemp";
 import AdditionalInfoCard from "./components/AdditionalInfoCard";
 import SunInfoCard from "./components/SunInfoCard";
+import WindCard from "./components/WindCard";
 
 export default function HomePage() {
 	return (
@@ -37,7 +38,7 @@ export default function HomePage() {
 						className="lg:w-[31vw] h-[75vh]"
 					>
 						<SunInfoCard />
-						<AdditionalInfoCard />
+						<WindCard />
 						<AdditionalInfoCard />
 						<AdditionalInfoCard />
 
