@@ -10,10 +10,11 @@ import SunInfoCard from "./components/SunInfoCard";
 import WindCard from "./components/WindCard";
 import UVInfo from "./components/UVInfo";
 import PrecipitationCard from "./components/PrecipitationCard";
+import { IconTemperature } from "@tabler/icons-react";
 
 export default function HomePage() {
 	return (
-		<div className="font-poppins">
+		<div>
 			<Header />
 			<div className="m-[1vw]">
 				<SimpleGrid
@@ -41,7 +42,9 @@ export default function HomePage() {
 						<UVInfo />
 						<PrecipitationCard />
 					</SimpleGrid>
-
+				</SimpleGrid>
+				<SimpleGrid className="grid-cols-4">
+					<AdditionalInfoCard title="Humidity" info="60%" footer="Last 24 hours" icon={<IconTemperature />} />
 				</SimpleGrid>
 			</div>
 		</div >
