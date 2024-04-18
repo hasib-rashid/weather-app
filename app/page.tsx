@@ -8,6 +8,7 @@ import LowestTemp from "./components/LowestTemp";
 import AdditionalInfoCard from "./components/AdditionalInfoCard";
 import SunInfoCard from "./components/SunInfoCard";
 import WindCard from "./components/WindCard";
+import UVInfo from "./components/UVInfo";
 
 export default function HomePage() {
 	return (
@@ -32,14 +33,14 @@ export default function HomePage() {
 						</SimpleGrid>
 					</div>
 
-					<SimpleGrid cols={{ base: 1, sm: 2, lg: 2 }}
+					<SimpleGrid cols={{ base: 2, sm: 2, lg: 2 }}
 						spacing={{ sm: 'sm' }}
 						verticalSpacing={{ sm: 'sm' }}
-						className="lg:w-[31vw] h-[75vh]"
+						className="sm:w-[50vw] mt-52 justify-center items-center lg:m-0 lg:w-[31vw] h-[75vh]"
 					>
 						<SunInfoCard />
 						<WindCard />
-						<AdditionalInfoCard />
+						<UVInfo />
 						<AdditionalInfoCard />
 
 					</SimpleGrid>
