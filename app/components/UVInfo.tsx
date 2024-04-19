@@ -14,17 +14,25 @@ const marks = [
 export default function UVInfo() {
     return (
         <div>
-            <Card className="w-full h-[220px] pb-9 text-white bg-[#1a1a1a] rounded-lg" >
-                <div className="flex items-center mb-6">
+            <Card className="w-full h-[210px] pb-9 text-white bg-[#1a1a1a] rounded-lg" >
+                <div className="flex items-center mb-3">
                     <IconUvIndex />
-                    <h3 className="text-[17px] ml-2 font-semibold">UV Index</h3>
+                    <h3 className="text-[20px] ml-3 font-semibold">UV Index</h3>
+                </div>
+                <div className="text-3xl font-bold">
+                    <h2 className="text-xl font-bold">5</h2>
+                    <h2 className="text-xl font-bold mb-3">Moderate</h2>
+                    <Slider value={70} className="pointer-events-none" marks={marks} color="violet" />
 
                 </div>
-                <h2 className="text-xl font-bold">5</h2>
-                <h2 className="text-xl font-bold mb-3">Moderate</h2>
-                <Slider value={70} className="pointer-events-none" marks={marks} color="violet" />
-                <h3 className="bottom-0 absolute mb-3">Take Precautions</h3>
+                <footer className="bottom-0 absolute mb-3">Take Precautions</footer>
             </Card>
+            {/* <Card className="w-full h-[220px] pb-9 text-white bg-[#1a1a1a] rounded-lg" >
+                <div className="flex items-center mb-6">
+                    <IconUvIndex />
+                </div>
+                <h3 className="bottom-0 absolute">Take Precautions</h3>
+            </Card> */}
         </div>
     )
 }
