@@ -4,7 +4,7 @@ import { IconSunHigh, IconSunset2 } from "@tabler/icons-react";
 export default function SunInfoCard() {
     return (
         <div>
-            <Card className="h-[39vh] pb-9 text-white bg-[#1a1a1a] rounded-lg" >
+            <Card className="pb-9 h-[220px] text-white bg-[#1a1a1a] rounded-lg" >
                 {/* Sunrise */}
                 <div className="flex items-center mb-3">
                     <IconSunHigh />

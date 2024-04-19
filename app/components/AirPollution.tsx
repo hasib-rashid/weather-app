@@ -12,13 +12,13 @@ export default function AirPollution() {
 
     return (
         <div>
-            <Card className="w-full h-[39vh] p-10 text-white bg-[#1a1a1a] rounded-lg" >
+            <Card className="w-full p-10 text-white bg-[#1a1a1a] rounded-lg" >
                 <div className="flex items-center mb-3">
                     <IconMist />
                     <h3 className="text-[20px] ml-3 font-semibold">Air Pollution</h3>
                 </div>
                 <Slider value={70} className="pointer-events-none" marks={marks} color="red" />
-                <h3 className="mt-12">Air Quality is quite bad</h3>
+                <h3 className="mt-[74px]">Air Quality is quite bad</h3>
             </Card>
         </div>
     )

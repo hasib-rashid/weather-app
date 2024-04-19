@@ -4,7 +4,7 @@ import { IconMapPin } from "@tabler/icons-react";
 export default function WeatherCard() {
     return (
         <main>
-            <Card className="h-[80vh] text-white bg-[#1a1a1a] p-4 rounded-lg" >
+            <Card className="text-white bg-[#1a1a1a] p-4 rounded-lg" >
                 <div className="cardTitle flex justify-between">
                     <h3 className="text-[20px] font-semibold">Tuesday</h3>
                     <h3 className="text-[20px] font-bold">7:00 AM</h3>

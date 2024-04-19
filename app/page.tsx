@@ -10,7 +10,8 @@ import SunInfoCard from "./components/SunInfoCard";
 import WindCard from "./components/WindCard";
 import UVInfo from "./components/UVInfo";
 import PrecipitationCard from "./components/PrecipitationCard";
-import { IconTemperature } from "@tabler/icons-react";
+import { IconBrandSpeedtest, IconDropletHalf2Filled, IconEye, IconTemperature } from "@tabler/icons-react";
+import Forecast from "./components/Forecast";
 
 export default function HomePage() {
 	return (
@@ -25,8 +26,8 @@ export default function HomePage() {
 					<div>
 						<AirPollution />
 						<SimpleGrid
-							verticalSpacing={{ base: 'md', sm: 'xl' }}
-							className="w-full h-[40vh] mt-[3vh] grid-cols-2"
+							verticalSpacing={{ base: 'sm', sm: 'xl' }}
+							className="w-full mt-[3vh] grid-cols-2"
 						>
 							<HighestTemp />
 							<LowestTemp />
@@ -34,7 +35,6 @@ export default function HomePage() {
 					</div>
 
 					<SimpleGrid
-						verticalSpacing={{ sm: 'sm' }}
 						className="justify-center items-center lg:m-0 sm:grid-cols-4 sm:w-[96vw] md:grid-cols-4 md:w-[96vw] lg:w-full lg:grid-cols-2"
 					>
 						<SunInfoCard />
@@ -43,9 +43,14 @@ export default function HomePage() {
 						<PrecipitationCard />
 					</SimpleGrid>
 				</SimpleGrid>
-				<SimpleGrid className="grid-cols-4">
-					<AdditionalInfoCard title="Humidity" info="60%" footer="Last 24 hours" icon={<IconTemperature />} />
+				<SimpleGrid className="mt-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+					<AdditionalInfoCard title="Feels Like" info="40°" footer="Feels warmer than actual temperature" icon={<IconTemperature />} />
+					<AdditionalInfoCard title="Humidity" info="74°" footer="Low Humidity, It might feel dry" icon={<IconDropletHalf2Filled />} />
+					<AdditionalInfoCard title="Visibility" info="10 km" footer="Its perfectly clear" icon={<IconEye />} />
+					<AdditionalInfoCard title="Pressure" info="1008 hPa" footer="Normal pressure with typical weather conditions" icon={<IconBrandSpeedtest />} />
 				</SimpleGrid>
+
+				<Forecast />
 			</div>
 		</div >
 	);
