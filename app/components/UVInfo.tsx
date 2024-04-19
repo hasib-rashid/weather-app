@@ -27,12 +27,6 @@ export default function UVInfo() {
                 </div>
                 <footer className="bottom-0 absolute mb-3">Take Precautions</footer>
             </Card>
-            {/* <Card className="w-full h-[220px] pb-9 text-white bg-[#1a1a1a] rounded-lg" >
-                <div className="flex items-center mb-6">
-                    <IconUvIndex />
-                </div>
-                <h3 className="bottom-0 absolute">Take Precautions</h3>
-            </Card> */}
         </div>
     )
 }
