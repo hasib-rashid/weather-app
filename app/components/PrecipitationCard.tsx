@@ -15,13 +15,6 @@ export default function PrecipitationCard() {
                 </div>
                 <footer className="bottom-0 absolute mb-3">Conditions are dry</footer>
             </Card>
-            {/* <Card className="w-full h-[220px] pb-9 text-white bg-[#1a1a1a] rounded-lg" >
-                <div className="flex items-center sm:mb-3 md:mb-3 lg:mb-6">
-                    <IconCloudRain />
-                    <h3 className="text-[17px] ml-2 font-semibold">Precipitation</h3>
-                </div>
-                <h3 className="lg:bottom-0 absolute">Conditions are dry</h3>
-            </Card> */}
         </div>
     )
 }
