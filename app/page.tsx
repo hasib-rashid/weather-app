@@ -12,6 +12,7 @@ import UVInfo from "./components/UVInfo";
 import PrecipitationCard from "./components/PrecipitationCard";
 import { IconBrandSpeedtest, IconDropletHalf2Filled, IconEye, IconTemperature } from "@tabler/icons-react";
 import Forecast from "./components/Forecast";
+import HourlyForecast from "./components/HourlyForecast";
 
 export default function HomePage() {
 	return (
@@ -51,6 +52,7 @@ export default function HomePage() {
 				</SimpleGrid>
 
 				<Forecast />
+				<HourlyForecast />
 			</div>
 		</div >
 	);
