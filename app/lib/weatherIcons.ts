@@ -33,8 +33,8 @@ export function getWeatherIcons(code: string) {
         case '13n':
             return 'https://cdn.weatherapi.com/weather/64x64/day/338.png'
         case '50d':
-            return 'https://openweathermap.org/img/wn/50d@2x.png'
+            return 'https://cdn.weatherapi.com/weather/64x64/day/248.png'
         case '50n':
-            return 'https://openweathermap.org/img/wn/50n@2x.png'
+            return 'https://cdn.weatherapi.com/weather/64x64/night/248.png'
     }
 }

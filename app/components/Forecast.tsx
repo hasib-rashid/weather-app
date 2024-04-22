@@ -1,5 +1,6 @@
 import { Card, SimpleGrid } from "@mantine/core";
 import { IconSunWind } from "@tabler/icons-react";
+import { getWeatherIcons } from "../lib/weatherIcons";
 
 export default function Forecast() {
     return (
@@ -21,7 +22,7 @@ export default function Forecast() {
                             })}</h3>
                             <div className="flex justify-center">
                                 <img
-                                    src="https://cdn.weatherapi.com/weather/64x64/day/113.png"
+                                    src={getWeatherIcons("50d")}
                                     alt="Rain"
                                     width={64}
                                     height={64}
