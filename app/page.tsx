@@ -48,7 +48,7 @@ export default function HomePage() {
 							className="w-full mt-[3vh] grid-cols-2"
 						>
 							<HighestTemp data={weatherData} />
-							<LowestTemp />
+							<LowestTemp data={weatherData} />
 						</SimpleGrid>
 					</div>
 
