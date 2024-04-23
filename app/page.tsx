@@ -57,7 +57,7 @@ export default function HomePage() {
 					>
 						<SunInfoCard />
 						<WindCard />
-						<UVInfo />
+						<UVInfo data={weatherData} />
 						<PrecipitationCard />
 					</SimpleGrid>
 				</SimpleGrid>

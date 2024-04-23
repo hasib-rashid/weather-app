@@ -11,7 +11,7 @@ const marks = [
     { value: 100, label: '10' },
 ];
 
-export default function UVInfo() {
+export default function UVInfo(data: any) {
     return (
         <div>
             <Card className="w-full h-[210px] pb-9 text-white bg-[#1a1a1a] rounded-lg" >
@@ -22,7 +22,7 @@ export default function UVInfo() {
                 <div className="text-3xl font-bold">
                     <h2 className="text-xl font-bold">5</h2>
                     <h2 className="text-xl font-bold mb-3">Moderate</h2>
-                    <Slider value={70} className="pointer-events-none" marks={marks} color="violet" />
+                    <Slider value={data.data.current.uv * 10} className="pointer-events-none" marks={marks} color="indigo" />
 
                 </div>
                 <footer className="bottom-0 absolute mb-3">Take Precautions</footer>
