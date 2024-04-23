@@ -55,7 +55,7 @@ export default function HomePage() {
 					<SimpleGrid
 						className="justify-center items-center lg:m-0 sm:grid-cols-4 sm:w-[96vw] md:grid-cols-4 md:w-[96vw] lg:w-full lg:grid-cols-2"
 					>
-						<SunInfoCard />
+						<SunInfoCard data={weatherData} />
 						<WindCard />
 						<UVInfo data={weatherData} />
 						<PrecipitationCard />
