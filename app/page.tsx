@@ -19,7 +19,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 export default function HomePage() {
-	const [weatherData, setWeatherData] = useState(null);
+	const [weatherData, setWeatherData] = useState<any>(null);
 
 
 	useEffect(() => {
@@ -62,10 +62,10 @@ export default function HomePage() {
 					</SimpleGrid>
 				</SimpleGrid>
 				<SimpleGrid className="mt-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-					<AdditionalInfoCard title="Feels Like" info="40°" footer="Feels warmer than actual temperature" icon={<IconTemperature />} />
-					<AdditionalInfoCard title="Humidity" info="74°" footer="Low Humidity, It might feel dry" icon={<IconDropletHalf2Filled />} />
-					<AdditionalInfoCard title="Visibility" info="10 km" footer="Its perfectly clear" icon={<IconEye />} />
-					<AdditionalInfoCard title="Pressure" info="1008 hPa" footer="Normal pressure with typical weather conditions" icon={<IconBrandSpeedtest />} />
+					<AdditionalInfoCard title="Feels Like" info={Math.round(weatherData.current.feelslike_c) + "°"} footer="Feels warmer than actual temperature" icon={<IconTemperature />} />
+					<AdditionalInfoCard title="Humidity" info={Math.round(weatherData.current.humidity) + "%"} footer="Low Humidity, It might feel dry" icon={<IconDropletHalf2Filled />} />
+					<AdditionalInfoCard title="Visibility" info={Math.round(weatherData.current.vis_km) + " km"} footer="Its perfectly clear" icon={<IconEye />} />
+					<AdditionalInfoCard title="Pressure" info={Math.round(weatherData.current.pressure_mb) + " mb"} footer="Normal pressure with typical weather conditions" icon={<IconBrandSpeedtest />} />
 				</SimpleGrid>
 
 				<Forecast />
