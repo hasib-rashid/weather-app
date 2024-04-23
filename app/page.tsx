@@ -23,7 +23,7 @@ export default function HomePage() {
 
 
 	useEffect(() => {
-		axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${process.env.NEXT_PUBLIC_WEATHERAPI}&q=Dhaka`).then((response) => {
+		axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${process.env.NEXT_PUBLIC_WEATHERAPI}&q=Dhaka&aqi=true`).then((response) => {
 			setWeatherData(response.data)
 		})
 	}, []);
