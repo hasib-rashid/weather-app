@@ -21,8 +21,9 @@ import axios from "axios";
 export default function HomePage() {
 	const [weatherData, setWeatherData] = useState(null);
 
+
 	useEffect(() => {
-		axios.get('http://api.weatherapi.com/v1/forecast.json?key=f29f20a2911d487dbbd133836241204&q=Dhaka').then((response) => {
+		axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${process.env.NEXT_PUBLIC_WEATHERAPI}&q=Dhaka`).then((response) => {
 			setWeatherData(response.data)
 		})
 	}, []);
