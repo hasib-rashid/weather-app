@@ -1,5 +1,6 @@
 import { Card, Slider } from "@mantine/core";
 import { IconUvIndex } from "@tabler/icons-react";
+import { getUVInfo, getUVTitle } from "../lib/getUVInfo";
 
 
 const marks = [
@@ -20,8 +21,8 @@ export default function UVInfo(data: any) {
                     <h3 className="text-[20px] ml-3 font-semibold">UV Index</h3>
                 </div>
                 <div className="text-3xl font-bold">
-                    <h2 className="text-xl font-bold">5</h2>
-                    <h2 className="text-xl font-bold mb-3">Moderate</h2>
+                    <h2 className="text-xl font-bold">{data.data.current.uv}</h2>
+                    <h2 className="text-lg font-semibold mb-3">{getUVTitle(data.data.current.uv)}</h2>
                     <Slider value={data.data.current.uv * 10} className="pointer-events-none" marks={marks} color="indigo" />
 
                 </div>

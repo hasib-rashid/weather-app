@@ -12,14 +12,10 @@ export function getUVInfo(uv: any) {
 }
 
 export function getUVTitle(uv: any) {
-    switch (uv) {
-        case uv >= 0 && uv < 3:
-            return 'Low'
-        case uv >= 3 && uv < 6:
-            return 'Moderate'
-        case uv >= 6 && uv < 8:
-            return 'High'
-        case uv >= 8 && uv < 11:
-            return 'Very high'
-    }
+    const uvTitle = [
+        'Very Low', 'Low', 'Moderate', 'High',
+        'Very High', 'Extreme', 'Dangerous',
+        'Very Dangerous', 'Extreme Danger', 'Brutally Dangerous',
+    ][uv - 1];
+    return uvTitle;
 }
