@@ -20,13 +20,12 @@ export default function UVInfo(data: any) {
                     <IconUvIndex />
                     <h3 className="text-[20px] ml-3 font-semibold">UV Index</h3>
                 </div>
-                <div className="text-3xl font-bold">
-                    <h2 className="text-xl font-bold">{data.data.current.uv}</h2>
-                    <h2 className="text-lg font-semibold mb-3">{getUVTitle(data.data.current.uv)}</h2>
+                <div>
+                    <h2 className="text-md font-bold">{data.data.current.uv}</h2>
+                    <h2 className="text-md">{getUVTitle(data.data.current.uv)}</h2>
                     <Slider value={data.data.current.uv * 10} className="pointer-events-none" marks={marks} color="indigo" />
-
                 </div>
-                <footer className="bottom-0 absolute mb-3">Take Precautions</footer>
+                <footer className="bottom-0 text-sm absolute mb-[10px]">{getUVInfo(data.data.current.uv)}</footer>
             </Card>
         </div>
     )
