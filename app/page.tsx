@@ -1,3 +1,5 @@
+"use client"
+
 import { SimpleGrid } from "@mantine/core";
 import Header from "./components/Header";
 import WeatherCard from "./components/WeatherCard";
@@ -13,8 +15,22 @@ import PrecipitationCard from "./components/PrecipitationCard";
 import { IconBrandSpeedtest, IconDropletHalf2Filled, IconEye, IconTemperature } from "@tabler/icons-react";
 import Forecast from "./components/Forecast";
 import HourlyForecast from "./components/HourlyForecast";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function HomePage() {
+	const [weatherData, setWeatherData] = useState(null);
+
+	useEffect(() => {
+		axios.get('http://api.weatherapi.com/v1/forecast.json?key=f29f20a2911d487dbbd133836241204&q=Dhaka').then((response) => {
+			setWeatherData(response.data)
+		})
+	}, []);
+
+	if (!weatherData) return
+
+	console.log(weatherData)
+
 	return (
 		<div>
 			<Header />
@@ -23,7 +39,7 @@ export default function HomePage() {
 					className="sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3"
 					verticalSpacing={{ base: 'md', sm: 'xl' }}
 				>
-					<WeatherCard />
+					<WeatherCard data={weatherData} />
 					<div>
 						<AirPollution />
 						<SimpleGrid
