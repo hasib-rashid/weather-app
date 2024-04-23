@@ -47,7 +47,7 @@ export default function HomePage() {
 							verticalSpacing={{ base: 'sm', sm: 'xl' }}
 							className="w-full mt-[3vh] grid-cols-2"
 						>
-							<HighestTemp />
+							<HighestTemp data={weatherData} />
 							<LowestTemp />
 						</SimpleGrid>
 					</div>
