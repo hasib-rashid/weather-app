@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 export default function Forecast(forecast: any) {
-    console.log(forecast.forecast.daily)
     return (
         <div className="bg-[#1a1a1a] p-4 rounded-md mt-3">
             {/* Forecast */}
