@@ -20,7 +20,7 @@ import axios from "axios";
 
 export default function HomePage() {
 	const [weatherData, setWeatherData] = useState<any>(null);
-
+	const [forecast, setForecast] = useState<any>([])
 
 	useEffect(() => {
 		axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${process.env.NEXT_PUBLIC_WEATHERAPI}&q=Dhaka&aqi=true`).then((response) => {
@@ -28,9 +28,14 @@ export default function HomePage() {
 		})
 	}, []);
 
-	if (!weatherData) return
+	useEffect(() => {
+		axios.get("https://api.openweathermap.org/data/2.5/onecall?lat=19.0760&lon=72.8777&cnt=7&appid=3e4be8c4dd9fa225551735e555eb7028&exclude=hourly,minutely").then((res) => {
+			setForecast(res.data)
+		})
+	}, [])
 
-	console.log(weatherData)
+	if (!forecast) return
+	if (!weatherData) return
 
 	return (
 		<div>
@@ -68,7 +73,7 @@ export default function HomePage() {
 					<AdditionalInfoCard title="Pressure" info={Math.round(weatherData.current.pressure_mb) + " mb"} footer="Normal pressure with typical weather conditions" icon={<IconBrandSpeedtest />} />
 				</SimpleGrid>
 
-				<Forecast />
+				<Forecast forecast={forecast} />
 				<HourlyForecast />
 			</div>
 		</div >
