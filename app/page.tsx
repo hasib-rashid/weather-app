@@ -29,7 +29,7 @@ export default function HomePage() {
 	}, []);
 
 	useEffect(() => {
-		axios.get("https://api.openweathermap.org/data/2.5/onecall?lat=19.0760&lon=72.8777&cnt=7&appid=3e4be8c4dd9fa225551735e555eb7028&exclude=hourly,minutely").then((res) => {
+		axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=19.0760&lon=72.8777&cnt=7&appid=${process.env.NEXT_PUBLIC_OPENWEATHERMAP}&exclude=hourly,minutely`).then((res) => {
 			setForecast(res.data)
 		})
 	}, [])
